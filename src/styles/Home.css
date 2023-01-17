@@ -1,0 +1,79 @@
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+.main {
+  background-color: var(--Dark-Blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: 350px;
+  background-color: var(--Dark-Grayish-Blue);
+  border-radius: 10px;
+  padding: 40px 20px;
+  position: relative;
+  min-width: 300px;
+}
+
+.main-container_title {
+  color: var(--Neon-Green);
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+.main-container_body {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  height: 200px;
+}
+
+.main-container_footer {
+  min-width: 200px;
+}
+
+.main-container_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dice {
+  width: 60px;
+  height: 60px;
+  background-color: var(--Neon-Green);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dice:hover {
+  box-shadow: hsla(150, 100%, 66%, 1) 0px 0px 29px 0px;
+}
+
+@media screen and (min-width: 700px) {
+  .main-container {
+    height: 300px;
+  }
+}
