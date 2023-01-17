@@ -6,13 +6,17 @@ function Home() {
     const response = await fetch("https://api.adviceslip.com/advice");
     const data = await response.json();
     setAdvice(data.slip.advice);
+    setAdviceNumber(data.slip.id);
   }
   const [advice, setAdvice] = useState("");
+  const [adviceNumber, setAdviceNumber] = useState("");
 
   return (
     <div className="main">
       <div className="main-container">
-        <div className="main-container_title">ADVICE #117</div>
+        <div className="main-container_title">
+          Advice #{adviceNumber.length == 0 ? "117" : adviceNumber}
+        </div>
         <div className="main-container_body">
           "
           {advice.length == 0
