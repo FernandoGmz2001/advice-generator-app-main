@@ -76,4 +76,7 @@
   .main-container {
     height: 300px;
   }
+  .main-container_body {
+    width: 24ch;
+  }
 }
